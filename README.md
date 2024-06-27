@@ -35,9 +35,10 @@ This software is made available under the GPL v.3 license. It means if you run a
 -   pipenv
 
 ## Install
-Just run application with docker-compose:
+Just run application with docker compose:
 
-    docker-compose up -d
+    docker compose up -d
+
 and next point your browser to [localhost](http://localhost/). 
 
 
