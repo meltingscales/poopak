@@ -1,16 +1,10 @@
-FROM python:3.12
+FROM python:3.8
 
-RUN mkdir /application
-
-RUN pip install pipenv
-
-COPY ./Pipfile /application
-COPY ./Pipfile.lock /application
-RUN pipenv install
+COPY . /application
 ENV HOME=/application
 WORKDIR /application
 
-COPY . /application
+RUN pip install -r requirements.txt
 
 ADD docker_wait /wait
 RUN chmod +x /wait

@@ -103,7 +103,7 @@ services:
     build: ./application
     image: web-app
     container_name: web-app
-    command: pipenv install && pipenv run python -m flask run --host=0.0.0.0 --port=8000
+    command: flask run --host=0.0.0.0 --port=8000
     # command: bash -c "/wait && gunicorn manage:app -b :8000 --name app --log-level=debug --log-file=-"
     volumes:
        - ./application:/application
